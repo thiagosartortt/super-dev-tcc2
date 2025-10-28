@@ -1,0 +1,26 @@
+<h1>Cadastro de Aluno</h1>
+
+
+<div class="flex flex-col gap-2">
+    <label for="nome">Nome</label>
+    <input pInputText id="nome" type="text"  [(ngModel)]="form.nome"/>
+</div>
+
+
+<div class="flex flex-col gap-2">
+    <label for="cpf">CPF</label>
+    <p-inputmask mask="999.999.999-99" id="cpf" [(ngModel)]="form.cpf" placeholder="999.999.999-99" />
+</div>
+
+
+<div class="flex flex-col gap-2">
+    <label for="data-nascimento">Data de Nascimento</label>
+   <p-datepicker [(ngModel)]="form.dataNascimento" id="data-nascimento" />
+</div>
+
+<div class="flex flex-col gap-2">
+    <label for="telefone">Telefone</label>
+    <p-inputmask mask="(99) 99999-9999" id="telefone" [(ngModel)]="form.telefone" placeholder="(99) 99999-9999" />
+</div>
+
+<p-button label="Salvar"  icon="pi pi-save" routerLink="/pages/alunos"/>
